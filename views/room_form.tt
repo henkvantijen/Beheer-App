@@ -1,0 +1,33 @@
+
+
+<form  action="/room/save" method="POST" class="pure-form pure-form-stacked">
+
+<fieldset>
+
+ <legend>Enter room information</legend>
+
+<input name="id" type="text" disabled>
+
+<label for="room_number">Room Number</label>
+<input id="room_number" type="text" place_holder="Room number" required autofocus>
+
+<label for="square_meters">Surface in Meters Squared (M2)</label>
+<input id="square_meters" type="range" min="0" max="150" oninput="amount.value=square_meters.value">
+<output name="amount" for="square_meters">0</output>
+
+<label for="has_wc" class="pure-checkbox">
+            <input id="has_wc" type="checkbox"> Has Private WC
+</label>
+<label for="has_shower" class="pure-checkbox">
+            <input id="has_shower" type="checkbox"> Has Private Shower
+</label>
+<label for="has_kitchen" class="pure-checkbox">
+            <input id="has_kitchen" type="checkbox"> Has Private Kitchen
+</label>
+
+
+<button type="submit" class="pure-button pure-button-primary">Save</button>
+
+</fieldset>
+
+</form>
