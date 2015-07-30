@@ -1,0 +1,21 @@
+
+
+<!--  login.tt  -->
+
+    [% IF not session.logged_in %]
+        
+		<form method="post" action="/login">
+		<input type="text" name ="uemail"    value="[% uemail %]">
+		<br/>
+		<input type="text" name ="password"  value="[% password	 %]">
+		<br/>
+		<input type="submit" name ="login" label="Login" title="Login">
+	
+     [% ELSE %]
+         You are already logged in!  <a href="[% logout_url %]">Log Out [% session.umail %]</a>
+     [% END %]
+  
+
+
+[% error %]
+

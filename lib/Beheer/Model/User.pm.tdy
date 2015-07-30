@@ -1,0 +1,13 @@
+package User;
+use base 'My::DB::Object';
+__PACKAGE__->meta->setup(
+    table      => 'users',
+    columns    => [qw(id uemail password_bcrypt)],
+    pk_columns => 'id',
+    unique_key => 'uemail',
+);
+
+# create the Foobar::Manager class
+__PACKAGE__->meta->make_manager_class('foobars');
+
+1;

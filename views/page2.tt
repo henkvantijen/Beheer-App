@@ -2,9 +2,11 @@
 
 <div>
 
-bblahh...
+bblahh...  login  
 
-
+   <a href="[% uri_for('/login') %]">Login page</a> 
+   <br/>
+    <a href="[% uri_for('login') %]">Login page</a> 
 </div>
 
 
